@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <div class="post-meta">
+      <span class="post-date">{{ page.date | date: "%Y年%m月%d日" }}</span>
+      <span class="post-category">{{ page.category }}</span>
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="post-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <div class="post-author">
+      <p><strong>作者：</strong>{{ page.author | default: site.author }}</p>
+    </div>
+    
+    <div class="post-share">
+      <h4>分享这篇文章</h4>
+      <p>如果你觉得这篇文章有帮助，欢迎转发给更多开发者！</p>
+    </div>
+    
+    <div class="post-services">
+      <h4>💼 需要开发服务？</h4>
+      <p>我们提供以下专业开发服务：</p>
+      <ul>
+        <li>🤖 AI Agent定制开发</li>
+        <li>⛓️ 智能合约开发 (Solidity/Rust)</li>
+        <li>🐍 Python自动化脚本</li>
+        <li>🔧 Web3应用开发 (Solana/以太坊)</li>
+      </ul>
+      <p><strong>联系方式：</strong>13315868800 (微信同号)</p>
+      <p><strong>公司：</strong>河北高软科技有限公司</p>
+    </div>
+    
+    <div class="sponsor-section">
+      <h4>❤️ 支持开源</h4>
+      <p>如果你喜欢我们的内容，欢迎通过以下方式支持：</p>
+      <a href="https://github.com/sponsors/yw13931835525-cyber" target="_blank" class="sponsor-btn">GitHub Sponsors</a>
+      <span style="margin: 0 10px;">|</span>
+      <span>加密货币: 0x6FCBd5d14FB296933A4f5a515933B153bA24370E</span>
+    </div>
+    
+    <div class="related-posts">
+      <h4>📚 相关文章</h4>
+      {% for post in site.related_posts limit:3 %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </div>
+  </footer>
+</article>

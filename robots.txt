@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yw13931835525-cyber.github.io/tech-blog-gaoruan/sitemap.xml

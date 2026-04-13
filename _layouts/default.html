@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.title %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+  {% else %}
+    <title>{{ site.title }}</title>
+  {% endif %}
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="{{ page.excerpt | default: site.description }}">
+  <meta name="keywords" content="{{ page.keywords | default: 'AI Agent, Web3, Python, 区块链, 智能合约, Solana, 开发教程' }}">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.excerpt | default: site.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.excerpt | default: site.description }}">
+  
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+  
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">首页</a>
+        <a href="{{ '/about.html' | relative_url }}">关于我们</a>
+        <a href="https://github.com/yw13931835525-cyber" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>关于博客</h3>
+          <p>高软科技技术团队分享AI Agent、Web3、Python自动化等领域的实战经验和开发教程。</p>
+        </div>
+        <div class="footer-section">
+          <h3>技术领域</h3>
+          <ul>
+            <li><a href="#">🤖 AI Agent开发</a></li>
+            <li><a href="#">⛓️ Web3开发</a></li>
+            <li><a href="#">🐍 Python自动化</a></li>
+            <li><a href="#">🛠️ 开发效率工具</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>联系我们</h3>
+          <p><a href="https://github.com/yw13931835525-cyber" target="_blank" rel="noopener">GitHub</a></p>
+          <p>邮箱: contact@gaoruantech.com</p>
+          <div style="margin-top: 10px;">
+            <a href="https://github.com/sponsors/yw13931835525-cyber" target="_blank" class="sponsor-btn">❤️ 支持我们</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        <p>收录于 <a href="https://github.com/yw13931835525-cyber/tech-blog-gaoruan" target="_blank" rel="noopener">GitHub</a> | 由 GitHub Pages 托管</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

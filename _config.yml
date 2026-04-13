@@ -1,0 +1,25 @@
+title: "高软科技技术博客"
+description: "AI Agent开发 | Web3区块链 | Python自动化 | 开发效率工具 - 来自一线开发者的实战经验"
+author: "高软科技团队"
+url: "https://yw13931835525-cyber.github.io"
+baseurl: "/tech-blog-gaoruan"
+github_username: yw13931835525-cyber
+github_repo: yw13931835525-cyber/tech-blog-gaoruan
+theme: minima
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    default_lang: python
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+feed:
+  path: atom.xml
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
