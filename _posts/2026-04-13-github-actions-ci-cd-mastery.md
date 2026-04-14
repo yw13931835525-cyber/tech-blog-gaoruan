@@ -187,3 +187,15 @@ jobs:
 ## 💼 需要DevOps服务？
 
 **联系方式：13315868800（微信同号）**
+
+---
+
+## ❤️ 支持我们
+
+如果你觉得我们的工具和教程有帮助，欢迎赞助开源项目：
+
+[![Sponsor](https://github.com/sponsors/yw13931835525-cyber/widgets/badge.svg)](https://github.com/sponsors/yw13931835525-cyber)
+
+**加密货币赞助：**
+- **ETH/ERC-20：** `0x6FCBd5d14FB296933A4f5a515933B153bA24370E`
+- **BTC：** `bc1pfvewxym02a4hwupn9f0d0x7h26uuf2jhjkcz3ysd9ef6acjttrmqwex66h`
